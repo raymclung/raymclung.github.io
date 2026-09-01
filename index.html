@@ -160,6 +160,15 @@
     line-height:1.7;
     color:var(--ink-2);
   }
+  .proj p code{
+    font-family:var(--mono);
+    font-size:.86em;
+    padding:1px 5px;
+    border-radius:4px;
+    background:var(--surface-2);
+    border:1px solid var(--line);
+    color:var(--ink-2);
+  }
   pre.term .p{color:var(--gold)}
   pre.term .d{color:var(--muted)}
   .proj-foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
@@ -323,6 +332,38 @@
         <span class="tag">Python</span>
         <span class="tag">Stockfish</span>
         <span class="tag">CLI</span>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div class="proj-top">
+        <h3><a href="https://github.com/raymclung/PGN-to-article">PGN to Article</a></h3>
+        <span class="year">2026</span>
+      </div>
+      <pre class="term"><span class="p">$</span> pgn-to-article partai.pgn --lang id -o artikel.md
+
+  [1/4] Parsed 153 half-moves
+  [2/4] Running engine analysis<span class="d">...</span>
+  [3/4] Prompt built <span class="d">—</span> 2,121 characters
+  [4/4] Asking ollama<span class="d">...</span>
+        done <span class="d">—</span> 1,708 characters written</pre>
+      <p>
+        Membaca satu partai, menandai momen kritisnya dengan Stockfish, lalu menuliskannya
+        menjadi artikel. Bagian yang menentukan ada di penyusun prompt: ia merangkai konteks —
+        siapa pemainnya, pembukaan apa, di langkah mana posisi berubah — bukan sekadar
+        menempelkan notasi partai.
+      </p>
+      <p class="note">
+        Alat ini saya pisahkan dari sistem yang lebih besar, sekaligus dipindahkan dari
+        .NET Framework ke .NET 10. <code>JavaScriptSerializer</code> diganti
+        <code>System.Text.Json</code> lewat lapisan kompatibilitas yang mempertahankan bentuk
+        data lama, sehingga 2.000 baris kode di bawahnya tidak perlu disentuh.
+      </p>
+      <div class="proj-foot">
+        <span class="tag">C#</span>
+        <span class="tag">.NET 10</span>
+        <span class="tag">Stockfish</span>
+        <span class="tag">LLM</span>
       </div>
     </article>
 
