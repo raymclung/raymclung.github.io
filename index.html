@@ -137,6 +137,31 @@
   .year{font-family:var(--mono);font-size:.78rem;color:var(--muted);white-space:nowrap}
   .proj p{margin:0 0 14px;color:var(--ink-2);font-size:.96rem}
   .proj p.note{color:var(--muted);font-size:.9rem;margin-bottom:16px}
+  .shot{
+    display:block;
+    margin:0 0 16px;
+    border:1px solid var(--line);
+    border-radius:8px;
+    overflow:hidden;
+    background:var(--surface-2);
+    line-height:0;
+  }
+  .shot img{width:100%;height:auto;display:block;opacity:.92;transition:opacity .18s}
+  .shot:hover img{opacity:1}
+  pre.term{
+    margin:0 0 16px;
+    padding:14px 16px;
+    background:#070A0E;
+    border:1px solid var(--line);
+    border-radius:8px;
+    overflow-x:auto;
+    font-family:var(--mono);
+    font-size:.78rem;
+    line-height:1.7;
+    color:var(--ink-2);
+  }
+  pre.term .p{color:var(--gold)}
+  pre.term .d{color:var(--muted)}
   .proj-foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
   .tag{
     font-family:var(--mono);
@@ -251,6 +276,9 @@
         <h3><a href="https://github.com/raymclung/RubyRa">RubyRa Stays</a></h3>
         <span class="year">2026</span>
       </div>
+      <a class="shot" href="https://raymclung.github.io/RubyRa/">
+        <img src="img/rubyra.jpg" alt="Halaman utama RubyRa Stays" loading="lazy" width="1000" height="672">
+      </a>
       <p>
         Prototipe antarmuka pemesanan penginapan — hotel, villa, resort. Tiga belas layar
         dan 53 fungsi JavaScript, seluruhnya dalam satu berkas HTML tanpa dependensi.
@@ -273,9 +301,16 @@
         <h3><a href="https://github.com/raymclung/PGN-to-puzzles-Chess">PGN to Puzzle</a></h3>
         <span class="year">2026</span>
       </div>
+      <pre class="term"><span class="p">$</span> python pgn_to_puzzles.py sample12.pgn --depth 10 -o puzzles.json
+
+  [  3] L5  ply 42  c7c5 <span class="d">-&gt;</span> Qxh6 Rf7 Rxg7+ Rxg7 Bc4+ d5 Rxd5 Qxd5 Bxd5+ Kf8
+  [  5] L4  ply 59  d6g6 <span class="d">-&gt;</span> Bxc2+ Ke3 Bd4#
+  [  6] L3  ply 23  g5e4 <span class="d">-&gt;</span> Nxe4 Nxe4 Qxe4 c3
+  <span class="d">...</span>
+  Wrote 16 puzzles -&gt; puzzles.json</pre>
       <p>
         Alat baris perintah yang membaca partai catur, mencari langkah yang mengubah posisi
-        seimbang menjadi kalah, lalu menjadikannya puzzle taktis. Mendeteksi 21 tema —
+        seimbang menjadi kalah, lalu menjadikannya puzzle taktis. Mendeteksi 26 tema —
         termasuk pola mat bernama seperti <em>smothered</em> dan <em>Anastasia</em> —
         semuanya ditulis dari nol tanpa pustaka tambahan.
       </p>
@@ -296,9 +331,13 @@
         <h3><a href="https://github.com/raymclung/Pesan-Aja">PesanAja</a></h3>
         <span class="year">2026</span>
       </div>
+      <a class="shot" href="https://raymclung.github.io/Pesan-Aja/">
+        <img src="img/pesanaja.jpg" alt="Halaman utama PesanAja" loading="lazy" width="1000" height="745">
+      </a>
       <p>
         Prototipe aplikasi pemesanan layanan seperti salon, spa, dan laundry. Dua puluh
-        halaman yang saling terhubung, mobile-first, dan bisa dipasang sebagai PWA.
+        halaman yang saling terhubung, mobile-first dengan tata letak desktop tersendiri,
+        dan bisa dipasang sebagai PWA.
       </p>
       <p class="note">
         Ini tugas kuliah. Masih ada CSS yang tercecer di beberapa halaman yang belum sempat
