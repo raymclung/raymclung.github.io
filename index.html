@@ -382,7 +382,9 @@
         desktop tersendiri, dan bisa dipasang sebagai PWA.
       </p>
       <p class="note">
-        Masih ada CSS yang tercecer di beberapa halaman yang belum sempat saya rapikan.
+        Tiap halaman punya blok <code>&lt;style&gt;</code> sendiri, dan lama saya kira itu
+        banyak pengulangan. Setelah diukur ternyata cuma 2% yang benar-benar duplikat —
+        sisanya memang khusus per halaman. Yang akhirnya saya satukan hanya 37 token desain.
       </p>
       <div class="proj-foot">
         <span class="tag">JavaScript</span>
