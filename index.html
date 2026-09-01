@@ -257,31 +257,6 @@
 
     <article class="proj">
       <div class="proj-top">
-        <h3><a href="https://github.com/raymclung/wa-bot-grup-catur">wa-bot-grup-catur</a></h3>
-        <span class="year">sejak Jun 2026</span>
-      </div>
-      <p>
-        Bot moderasi grup WhatsApp untuk komunitas catur. Arsitekturnya dipisah:
-        <strong>gateway</strong> (Node.js) hanya mengurus koneksi, <strong>brain</strong>
-        (C# .NET 10) memegang seluruh logika. Dengan begitu aturan moderasi bisa diuji
-        tanpa perlu terhubung ke WhatsApp sama sekali.
-      </p>
-      <p class="note">
-        Tantangan terbesarnya bukan pada logika moderasi, melainkan pada batasan WhatsApp
-        itu sendiri. Setelah bot terkena pembatasan 403 akibat volume pesan yang terlalu
-        tinggi, saya menerapkan tiga penanganan: batas 50 pesan per jam untuk seluruh akun,
-        jawaban puzzle diubah dari gambar papan menjadi teks agar ukuran kiriman jauh lebih
-        kecil, dan jeda sambung-ulang bertingkat ketika koneksi terputus.
-      </p>
-      <div class="proj-foot">
-        <span class="tag">C#</span>
-        <span class="tag">.NET 10</span>
-        <span class="tag">Node.js</span>
-        <span class="tag">Baileys</span>
-      </div>
-    </article>
-    <article class="proj">
-      <div class="proj-top">
         <h3><a href="https://github.com/raymclung/PGN-to-puzzles-Chess">PGN to Puzzle</a></h3>
         <span class="year">2026</span>
       </div>
@@ -316,16 +291,37 @@
     </article>
     <article class="proj">
       <div class="proj-top">
+        <h3><a href="https://github.com/raymclung/wa-bot-grup-catur">wa-bot-grup-catur</a></h3>
+        <span class="year">sejak Jun 2026</span>
+      </div>
+      <p>
+        Bot moderasi grup WhatsApp untuk komunitas catur. Arsitekturnya dipisah:
+        <strong>gateway</strong> (Node.js) hanya mengurus koneksi, <strong>brain</strong>
+        (C# .NET 10) memegang seluruh logika. Dengan begitu aturan moderasi bisa diuji
+        tanpa perlu terhubung ke WhatsApp sama sekali.
+      </p>
+      <p class="note">
+        Tantangan terbesarnya bukan pada logika moderasi, melainkan pada batasan WhatsApp
+        itu sendiri. Setelah bot terkena pembatasan 403 akibat volume pesan yang terlalu
+        tinggi, saya menerapkan tiga penanganan: batas 50 pesan per jam untuk seluruh akun,
+        jawaban puzzle diubah dari gambar papan menjadi teks agar ukuran kiriman jauh lebih
+        kecil, dan jeda sambung-ulang bertingkat ketika koneksi terputus.
+      </p>
+      <div class="proj-foot">
+        <span class="tag">C#</span>
+        <span class="tag">.NET 10</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">Baileys</span>
+      </div>
+    </article>
+    <article class="proj">
+      <div class="proj-top">
         <h3><a href="https://github.com/raymclung/PGN-to-article">PGN to Article</a></h3>
         <span class="year">2026</span>
       </div>
-      <pre class="term"><span class="p">$</span> pgn-to-article partai.pgn --lang id -o artikel.md
-
-  [1/4] Parsed 153 half-moves
-  [2/4] Running engine analysis<span class="d">...</span>
-  [3/4] Prompt built <span class="d">—</span> 2,121 characters
-  [4/4] Asking ollama<span class="d">...</span>
-        done <span class="d">—</span> 1,708 characters written</pre>
+      <a class="shot" href="https://github.com/raymclung/PGN-to-article">
+        <img src="img/article.jpg" alt="Menjalankan pgn-to-article di terminal" loading="lazy" width="1000" height="470">
+      </a>
       <p>
         Membaca satu partai, menandai momen kritisnya dengan Stockfish, lalu menuliskannya
         menjadi artikel. Bagian yang menentukan ada di penyusun prompt: ia merangkai konteks,
